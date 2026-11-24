@@ -1,0 +1,29 @@
+version: "3"
+
+tasks:
+  default:
+    desc: Full setup (deps, symlink, plugins)
+    cmds:
+      - task: install
+
+  install:
+    desc: Install dependencies, symlink the config to ~/.config/nvim, sync plugins
+    cmds:
+      - task: deps
+      - task: link
+      - task: plugins
+
+  deps:
+    desc: Install system dependencies
+    cmds:
+      - ./scripts/install.sh deps
+
+  link:
+    desc: Symlink this repo to ~/.config/nvim (backs up an existing config)
+    cmds:
+      - ./scripts/install.sh link
+
+  plugins:
+    desc: Install and sync Neovim plugins
+    cmds:
+      - ./scripts/install.sh plugins
