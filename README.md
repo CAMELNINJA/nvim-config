@@ -8,8 +8,8 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 Requires [Task](https://taskfile.dev) (`brew install go-task`).
 
 ```sh
-git clone https://github.com/CAMELNINJA/nvim-config ~/dotfiles/nvim-config
-cd ~/dotfiles/nvim-config
+git clone https://github.com/CAMELNINJA/nvim-config ~/go/src/myprojects/nvim-config
+cd ~/go/src/myprojects/nvim-config
 task install
 ```
 
